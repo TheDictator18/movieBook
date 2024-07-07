@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Movie Magic</h1>
+    </header>
+    <main>
+        <section class="banner">
+            <button id="prev">❮</button>
+            <div class="slides">
+                <img src="movie1.jpg" alt="Movie 1">
+                <img src="movie2.jpg" alt="Movie 2">
+                <img src="movie3.jpg" alt="Movie 3">
+            </div>
+            <button id="next">❯</button>
+        </section>
+
+        <section class="movie-selection">
+            <h2>Select a Movie</h2>
+            <form id="booking-form">
+                <label for="movie">Movie:</label>
+                <select id="movie" name="movie">
+                    <option value="Movie 1">Movie 1</option>
+                    <option value="Movie 2">Movie 2</option>
+                    <option value="Movie 3">Movie 3</option>
+                </select>
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date">
+
+                <label for="time">Time:</label>
+                <select id="time" name="time">
+                    <option value="Morning">Morning</option>
+                    <option value="Afternoon">Afternoon</option>
+                    <option value="Evening">Evening</option>
+                </select>
+
+                <label for="seats">Number of Seats:</label>
+                <input type="number" id="seats" name="seats" min="1" max="10">
+
+                <div class="seat-selection">
+                    <h3>Select Your Seats</h3>
+                    <div class="seat-row">
+                        <span class="seat" data-seat="A1">A1</span>
+                        <span class="seat" data-seat="A2">A2</span>
+                        <span class="seat" data-seat="A3">A3</span>
+                        <span class="seat" data-seat="A4">A4</span>
+                    </div>
+                    <div class="seat-row">
+                        <span class="seat" data-seat="B1">B1</span>
+                        <span class="seat" data-seat="B2">B2</span>
+                        <span class="seat" data-seat="B3">B3</span>
+                        <span class="seat" data-seat="B4">B4</span>
+                    </div>
+                    <!-- Add more rows as needed -->
+                </div>
+
+                <button type="submit">Book Now</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Movie Magic. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
