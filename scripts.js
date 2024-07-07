@@ -27,6 +27,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    const modal = document.getElementById('modal');
+    const closeButton = document.querySelector('.close-button');
+    const submitButton = document.getElementById('submit-button');
+
+    document.querySelector('.book-now-button').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent form submission
+        modal.style.display = 'block';
+    });
+
+    closeButton.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+
+    submitButton.addEventListener('click', function() {
+        const email = document.getElementById('email-input').value;
+        console.log('Email submitted:', email);
+        modal.style.display = 'none';
+    });
+
+    // Close the modal if the user clicks outside of it
+    window.addEventListener('click', function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    });
+
     document.getElementById('booking-form').addEventListener('submit', function(event) {
         event.preventDefault();
 
